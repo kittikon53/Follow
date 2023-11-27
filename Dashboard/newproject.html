@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="newProject-section">
+        <div class="newProject-container">
+            <label for="project-name">Project Name:</label>
+            <input type="text" id="project-name" placeholder="Enter project name">
+    
+            <label for="progress">Progress:</label>
+            <select id="progress">
+                <option value="not-started">To do</option>
+                <option value="in-progress">In progress</option>
+                <option value="finished">Completed</option>
+            </select>            
+    
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date">
+    
+            <label for="due-date">Due Date:</label>
+            <input type="date" id="due-date">
+    
+            <label for="label-color">Label:</label>
+            <input type="color" id="label-color">
+    
+            <label for="task-description">Task Description:</label>
+            <textarea id="task-description" placeholder="Enter task description"></textarea>
+    
+            <label for="file">Attach File:</label>
+            <input type="file" id="file">
+    
+            <label for="comment">Comment:</label>
+            <textarea id="comment" placeholder="Enter comment"></textarea>
+    
+            <!-- ปุ่ม Add ที่มี id="add-button" -->
+            <button id="add-button" onclick="addTask()">Add</button>
+        </div>
+    </section>
+
+    <!-- ส่วนนี้คือส่วนที่เพิ่มขึ้นมา -->
+<script>
+    function addTask() {
+        // Get values from input fields
+        var project_name = document.getElementById("project-name").value;
+        var progress = document.getElementById("progress").value;
+        var start_date = document.getElementById("start-date").value;
+        var due_date = document.getElementById("due-date").value;
+        var label_color = document.getElementById("label-color").value;
+        var task_description = document.getElementById("task-description").value;
+        var file = document.getElementById("file").value;
+        var comment = document.getElementById("comment").value;
+
+        // Create an XMLHttpRequest object
+        var xhr = new XMLHttpRequest();
+
+        // Set up a POST request with the specified URL and asynchronous flag
+        xhr.open("POST", "save_task.php", true);
+
+        // Set the content type of the request
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        // Set up a function to handle the response
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                // Handle the response from the server
+                console.log(xhr.responseText); // Log the response to the console
+                alert(xhr.responseText); // Show an alert with the response
+                window.location.href = "dashboard.html"; // Redirect to the dashboard page
+            }
+        };
+
+        // Create a URL-encoded string to send as the POST data
+        var params = "project_name=" + project_name +
+                     "&progress=" + progress +
+                     "&start_date=" + start_date +
+                     "&due_date=" + due_date +
+                     "&label_color=" + label_color +
+                     "&task_description=" + task_description +
+                     "&file=" + file +
+                     "&comment=" + comment;
+
+        // Send the POST request with the parameters
+        xhr.send(params);
+    }
+</script>

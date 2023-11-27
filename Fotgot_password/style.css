@@ -1,0 +1,210 @@
+/* Style the container of the registration form */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form header */
+h2 {
+    color: #333;
+}
+
+/* Style form labels and input fields */
+form label {
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #c8d3f9;
+    border-radius: 80px;
+}
+
+/* Style the registration button */
+form input[type="submit"] {
+    background-color: #F27875;
+    color: #fff;
+    padding: 10px 50px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 80px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style the login link */
+p a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+/* Apply styles to the entire body of the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF9F9;
+    text-align: center;
+}
+
+/* Style the container of the password reset form */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: -200px;
+}
+
+/* Style the form header */
+h2 {
+    color: #333;
+}
+
+/* Style form labels and input fields */
+form label {
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+}
+
+form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #c8d3f9;
+    border-radius: 80px;
+}
+
+/* Style the reset password button */
+form button {
+    background-color: #F27875;
+    color: #fff;
+    padding: 10px 50px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 80px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Style the links container */
+.links-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Style the links */
+.links-container a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 15px; /* เพิ่มขนาดตัวหนังสือตามที่คุณต้องการ */
+    margin: 0 20px; /* เพิ่มระยะห่างระหว่างลิงก์ */
+    margin-top: 20px;
+}
+
+  .image {
+    width: 385px;
+    height: 385px;
+  }
+  
+  .image {
+    width: 385px;
+    height: 385px;
+  }
+  
+  .image .logo-followup1 {
+    position: fixed;
+    width: 185px;
+    height: 150px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+  /* เพิ่มคลาสส์สำหรับปุ่ม */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.reset-button {
+    background-color: #F27875;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 80px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 60px; /* เพิ่มขอบขวาให้ปุ่ม Reset Password */
+}
+
+.login-button {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 15px; /* เพิ่มขนาดตัวหนังสือตามที่คุณต้องการ */
+    margin: 0 50px; /* เพิ่มระยะห่างระหว่างลิงก์ */
+    margin-left: 100px; /* เพิ่มขอบซ้ายให้ลิงก์ Back to Login */
+}
+
+/* สไตล์สำหรับปุ่ม Reset Password และลิงก์ Back to Login */
+.reset-button:hover {
+    background-color: #0056b3;
+}
+
+/* เพิ่มคลาสสำหรับข้อมูล Contact Us */
+.contact-link {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+/* ปรับลิงก์ Contact Us เป็นสีอื่น ๆ หรือรูปแบบตามที่คุณต้องการ */
+.contact-link a {
+    color: #FF5733; /* เปลี่ยนสีตามที่คุณต้องการ */
+    text-decoration: none; /* กำหนดลิงก์ให้ไม่มีขีดเส้นใต้ */
+    font-weight: bold; /* กำหนดตัวหนา */
+}
+
+.flex-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.frame-8, .frame-9, .icon-font-awesome {
+    display: inline-block;
+    margin-left: 30px;
+    padding: 10px;
+    margin: 25px;
+}
+
+.text-wrapper-6 {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+.icon-font-awesome img {
+    width: 30px;
+    height: 30px;
+}

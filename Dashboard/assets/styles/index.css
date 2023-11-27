@@ -1,0 +1,13 @@
+@import url(reset.css);
+@import url(menu.css);
+@import url(todo-header-style.css);
+@import url(todo-main-style.css);
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+.mainBox {
+    display: flex;
+    height: 100vh;
+    gap: 1rem;
+}
